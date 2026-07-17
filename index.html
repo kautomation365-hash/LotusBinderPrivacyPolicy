@@ -1,180 +1,475 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Privacy Policy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LotusBinder Privacy Policy / LotusBinder プライバシーポリシー" />
+  <title>LotusBinder Privacy Policy</title>
   <style>
+    :root {
+      color-scheme: dark;
+      --background: #080808;
+      --surface: #121212;
+      --surface-border: #2a271f;
+      --text: #f5f2ea;
+      --muted: #b6b0a4;
+      --gold: #dfb968;
+      --gold-soft: rgba(223, 185, 104, 0.12);
+      --max-width: 860px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      padding: 1em;
-      line-height: 1.6;
-      color: #222;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 28px;
-    }
-
-    h2 {
-      margin-top: 32px;
-      font-size: 20px;
-    }
-
-    p, li {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans",
+        "Yu Gothic", YuGothic, Arial, sans-serif;
       font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
-      color: #0066cc;
+      color: var(--gold);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      border-radius: 4px;
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    .hero {
+      padding: 32px;
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at top right, rgba(223, 185, 104, 0.11), transparent 38%),
+        var(--surface);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.58em;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .updated {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .language-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .language-nav a {
+      min-width: 108px;
+      padding: 9px 16px;
+      border: 1px solid rgba(223, 185, 104, 0.45);
+      border-radius: 999px;
+      background: var(--gold-soft);
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .policy {
+      margin-top: 28px;
+      padding: 32px;
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      background: var(--surface);
+      scroll-margin-top: 20px;
+    }
+
+    .policy > h2 {
+      margin: 0 0 28px;
+      color: var(--gold);
+      font-size: 24px;
+    }
+
+    .policy-section + .policy-section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--surface-border);
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.45;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    footer {
+      padding: 30px 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: min(100% - 24px, var(--max-width));
+        padding: 20px 0 48px;
+      }
+
+      .hero,
+      .policy {
+        padding: 22px 20px;
+        border-radius: 16px;
+      }
+
+      .policy {
+        margin-top: 16px;
+      }
+
+      .policy > h2 {
+        margin-bottom: 22px;
+      }
+
+      .language-nav a {
+        flex: 1;
+      }
+    }
+
+    @media print {
+      :root {
+        color-scheme: light;
+        --background: #ffffff;
+        --surface: #ffffff;
+        --surface-border: #cccccc;
+        --text: #111111;
+        --muted: #555555;
+        --gold: #6c4c00;
+        --gold-soft: transparent;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero,
+      .policy {
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="page">
+    <header class="hero">
+      <p class="eyebrow">LOTUSBINDER</p>
+      <h1>
+        プライバシーポリシー
+        <span lang="en">Privacy Policy</span>
+      </h1>
+      <p class="updated">
+        最終更新日: <time datetime="2026-07-17">2026年7月17日</time><br />
+        <span lang="en">Last updated: <time datetime="2026-07-17">July 17, 2026</time></span>
+      </p>
+      <nav class="language-nav" aria-label="言語 / Language">
+        <a href="#japanese">日本語</a>
+        <a href="#english" lang="en">English</a>
+      </nav>
+    </header>
 
-<h1>Privacy Policy</h1>
+    <main>
+      <section class="policy" id="japanese" lang="ja" aria-labelledby="japanese-title">
+        <h2 id="japanese-title">日本語</h2>
 
-<p>
-This privacy policy applies to the LotusBinder mobile application
-(hereinafter referred to as the "Application"), developed by the
-Service Provider ("we", "us", or "our"). The Application is provided "AS IS".
-</p>
+        <section class="policy-section">
+          <h3>1. 基本方針</h3>
+          <p>
+            LotusBinderは、Magic: The Gatheringのカードコレクション、デッキ、購入リスト、価格履歴、共有画像などを管理するためのアプリです。本アプリの機能提供、品質改善、不具合調査に必要な範囲で情報を取り扱います。
+          </p>
+        </section>
 
-<p>
-LotusBinder is designed to prioritize local device storage and user privacy.
-</p>
+        <section class="policy-section">
+          <h3>2. アプリ内に保存する情報</h3>
+          <p>
+            登録したカード、枚数、加工種別、状態、メモ、購入価格、デッキ、購入リスト、お気に入り、スキャン画像、共有画像の生成に必要な情報、アプリ設定を端末内に保存します。
+          </p>
+          <p>
+            これらは主に端末内で処理されます。本アプリを削除すると、アプリの保存領域にある情報は端末から削除されます。利用者が写真ライブラリへ保存した共有画像は写真ライブラリによって管理されるため、本アプリを削除しても自動的には削除されません。
+          </p>
+        </section>
 
-<h2>What information does the Application collect?</h2>
+        <section class="policy-section">
+          <h3>3. カメラ、写真、モーション</h3>
+          <p>
+            カメラはカードをスキャンし、カード名やセット情報を読み取るために使用します。
+          </p>
+          <p>
+            写真ライブラリは、利用者が共有画像を保存する操作をした場合に使用します。
+          </p>
+          <p>
+            モーション情報は、カード画像の光沢表現を端末の傾きに合わせて表示するために使用し、利用者を識別する目的では使用しません。
+          </p>
+        </section>
 
-<p>
-The Application may automatically collect limited diagnostic and usage
-information, such as device type, operating system version, and general
-application usage statistics, in order to improve the Application and its features.
-</p>
+        <section class="policy-section">
+          <h3>4. 外部サービスへの通信</h3>
+          <p>
+            カード検索、カード画像、セット情報、価格情報の取得のためにScryfall APIへ通信します。
+          </p>
+          <p>
+            商品検索、購入先比較、アフィリエイトリンクの表示や遷移のために、楽天市場、Yahoo!ショッピング、メルカリ、eBayなどの外部サービスを開く場合があります。
+          </p>
+          <p>
+            外部サービス上での情報の取り扱いは、各サービスのプライバシーポリシーに従います。
+          </p>
+        </section>
 
-<p>
-Card images scanned by the Application are stored locally on your device
-for collection management purposes. These images are not uploaded to
-external servers or shared with third parties by the Application.
-</p>
+        <section class="policy-section">
+          <h3>5. 解析情報</h3>
+          <p>
+            コレクション機能の利用状況を把握し、登録上限やカード登録導線などの改善を判断するため、Google Analytics for Firebaseを使用します。
+          </p>
+          <p>
+            アプリが独自に送信するのは、コレクション枚数の範囲、適用中の登録上限、カードの追加方法、追加・上限接近・上限到達・追加拒否の回数です。正確なコレクション枚数は、上限到達時などを除いて範囲に分けて送信します。
+          </p>
+          <p>
+            カード名、カードID、セット情報、価格、画像、検索語、デッキ名やデッキ内容、購入リストやお気に入りの内容、メモなど、利用者が管理するカード固有の情報は送信しません。
+          </p>
+        </section>
 
-<p>
-Users may voluntarily export, save, or share card images using the
-Application’s sharing features at their own discretion.
-</p>
+        <section class="policy-section">
+          <h3>6. Google Analyticsが自動的に扱う情報</h3>
+          <p>
+            Google Analyticsは、アプリインスタンス識別子、アプリの起動やセッションに関する情報、アプリのバージョン、端末・OS・言語、Firebase SDKの動作状況に関する診断情報なども処理します。
+          </p>
+          <p>
+            また、通信時のIPアドレスから国や都市などのおおよその地域を推定しますが、Google AnalyticsではIPアドレス自体を記録・保存しないとされています。LotusBinderでは、地域情報を国単位の利用傾向の把握に使用し、対応言語や機能改善の判断に役立てます。住所や現在地の特定を目的に使用しません。
+          </p>
+          <p>
+            本アプリの解析設定では、広告識別子（IDFA）とIDFVの収集、広告パーソナライズ信号、自動画面計測を無効にしています。
+          </p>
+          <p>
+            解析情報にはアプリのインストール単位を区別する識別子が含まれるため、「完全に匿名」とは扱いません。LotusBinderは、この識別子を実世界の個人を特定する目的では使用しません。
+          </p>
+        </section>
 
-<h2>Does the Application collect precise real-time location information?</h2>
+        <section class="policy-section">
+          <h3>7. 送信の停止と保存期間</h3>
+          <p>
+            利用状況の共有は初期設定で有効です。設定画面からいつでも無効にでき、無効にした後は新しいAnalyticsデータを送信しません。
+          </p>
+          <p>
+            送信済みのイベント単位およびアプリインスタンス単位のデータは、Google Analyticsの保存期間設定とGoogleのポリシーに従って処理されます。集計済みレポートには、同じ保存期間が適用されない場合があります。
+          </p>
+          <p>
+            LotusBinderでは、解析データを特定の利用者に対応するデータとして検索・管理していません。本アプリには、送信済みの解析データを利用者が個別に指定して削除する機能はありません。
+          </p>
+        </section>
 
-<p>
-No. The Application does not collect precise location information from
-your mobile device.
-</p>
+        <section class="policy-section">
+          <h3>8. 第三者による処理とトラッキング</h3>
+          <p>
+            解析データはGoogle LLCが提供するGoogle Analyticsで処理され、Googleの利用規約とプライバシーポリシーが適用されます。
+          </p>
+          <p>
+            LotusBinderは解析データを販売せず、他社のアプリやWebサイトをまたいだ広告目的の追跡や、広告のパーソナライズに使用しません。
+          </p>
+          <p>
+            将来、広告識別子を利用したトラッキングを導入する場合は、本ポリシーを更新し、AppleのApp Tracking Transparencyに従って許可を求めます。
+          </p>
+        </section>
 
-<h2>How does the Application process card information?</h2>
+        <section class="policy-section">
+          <h3>9. 本ポリシーの変更</h3>
+          <p>
+            収集目的、送信項目、利用する外部サービス、または利用者が選択できる設定を変更する場合は、本ポリシーとアプリ内の説明を実態に合わせて更新します。
+          </p>
+          <p>
+            重要な変更がある場合は、アプリ内表示などの適切な方法でお知らせします。
+          </p>
+        </section>
 
-<p>
-The Application may use on-device image analysis technologies to
-recognize and organize card information. Image data is processed locally
-on your device and is not uploaded to external servers by the Application.
-</p>
+        <section class="policy-section">
+          <h3>10. 問い合わせ</h3>
+          <p>
+            本ポリシーやサポートに関する問い合わせは、
+            <a href="https://x.com/LotusBinder">LotusBinderサポート窓口</a>
+            までお願いします。
+          </p>
+        </section>
+      </section>
 
-<h2>Do third parties see and/or have access to information obtained by the Application?</h2>
+      <section class="policy" id="english" lang="en" aria-labelledby="english-title">
+        <h2 id="english-title">English</h2>
 
-<p>
-Only aggregated and anonymized usage information may be transmitted to
-external services for analytics, diagnostics, and application improvement purposes.
-The Service Provider does not sell or share personal information with
-third parties for advertising purposes.
-</p>
+        <section class="policy-section">
+          <h3>1. Basic Policy</h3>
+          <p>
+            LotusBinder is an app for managing Magic: The Gathering card collections, decks, purchase lists, price histories, shareable images, and related information. Information is handled only to the extent necessary to provide app features, improve quality, and investigate issues.
+          </p>
+        </section>
 
-<p>
-The Application may use third-party analytics services, such as
-<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Analytics</a>,
-to help understand application usage and improve the user experience.
-These services may collect anonymized diagnostic and usage information.
-</p>
+        <section class="policy-section">
+          <h3>2. Information Stored in the App</h3>
+          <p>
+            The app stores registered cards, quantities, finishes, conditions, notes, purchase prices, decks, purchase lists, favorites, scanned images, information needed to generate shareable images, and app settings on the device.
+          </p>
+          <p>
+            This information is primarily processed on the device. Deleting the app removes information stored within the app's storage area from the device. Images that the user has saved to the photo library are managed by the photo library and are not automatically deleted when the app is removed.
+          </p>
+        </section>
 
-<p>
-The Service Provider may disclose information only in the following cases:
-</p>
+        <section class="policy-section">
+          <h3>3. Camera, Photos, and Motion</h3>
+          <p>
+            The camera is used to scan cards and read information such as card names and set details.
+          </p>
+          <p>
+            The photo library is accessed when the user chooses to save a shareable image.
+          </p>
+          <p>
+            Motion information is used to adjust visual foil effects on card images according to the device's tilt. It is not used to identify the user.
+          </p>
+        </section>
 
-<ul>
-  <li>when required by law or legal process;</li>
-  <li>when necessary to protect rights, safety, or investigate fraud;</li>
-  <li>with trusted service providers who assist in operating the Application and are obligated to protect the information.</li>
-</ul>
+        <section class="policy-section">
+          <h3>4. Communication with External Services</h3>
+          <p>
+            The app communicates with the Scryfall API to retrieve card search results, card images, set information, and price information.
+          </p>
+          <p>
+            The app may open external services such as Rakuten, Yahoo! Shopping, Mercari, and eBay for product searches, purchase comparisons, and affiliate links.
+          </p>
+          <p>
+            Information handled by an external service is subject to that service's privacy policy.
+          </p>
+        </section>
 
-<h2>What are my opt-out rights?</h2>
+        <section class="policy-section">
+          <h3>5. Analytics Information</h3>
+          <p>
+            LotusBinder uses Google Analytics for Firebase to understand how collection features are used and to guide improvements to collection capacity, card-addition flows, and related features.
+          </p>
+          <p>
+            The app's custom analytics events include only collection-size ranges, the collection limit currently applied, the method used to add a card, and counts of additions, approaching or reaching the limit, and additions blocked by the limit. Except for limit-related states such as reaching the limit, collection sizes are sent as ranges rather than exact counts.
+          </p>
+          <p>
+            The app does not send card-specific information managed by the user, such as card names, card IDs, set information, prices, images, search terms, deck names or contents, purchase-list or favorite contents, or notes.
+          </p>
+        </section>
 
-<p>
-You can stop all collection of information by uninstalling the
-Application using the standard uninstall process available on your
-device or application marketplace.
-</p>
+        <section class="policy-section">
+          <h3>6. Information Automatically Processed by Google Analytics</h3>
+          <p>
+            Google Analytics also processes an app-instance identifier, information about app launches and sessions, the app version, device, operating system and language information, and diagnostic information about Firebase SDK operation.
+          </p>
+          <p>
+            Google Analytics may also estimate a country, city, or other coarse region from the IP address used for communication. Google states that the IP address itself is not logged or stored by Google Analytics. LotusBinder uses regional information only to understand usage trends at the country level and to guide decisions about supported languages and feature improvements. It is not used to determine an address or current location.
+          </p>
+          <p>
+            The app's analytics configuration disables collection of the advertising identifier (IDFA) and IDFV, advertising-personalization signals, and automatic screen reporting.
+          </p>
+          <p>
+            Because analytics information includes an identifier that distinguishes one app installation from another, it is not described as completely anonymous. LotusBinder does not use this identifier to identify a real-world individual.
+          </p>
+        </section>
 
-<h2>Data Retention Policy</h2>
+        <section class="policy-section">
+          <h3>7. Disabling Transmission and Data Retention</h3>
+          <p>
+            Usage-data sharing is enabled by default. It can be disabled at any time in the app's settings. After it is disabled, the app does not send new Analytics data.
+          </p>
+          <p>
+            Previously transmitted event-level and app-instance-level data is processed according to the retention settings configured in Google Analytics and Google's applicable policies. The same retention period may not apply to aggregated reports.
+          </p>
+          <p>
+            LotusBinder does not maintain analytics data in a way that allows it to search for data associated with a particular user. The app does not provide a feature that allows a user to individually identify and delete previously transmitted analytics data.
+          </p>
+        </section>
 
-<p>
-Most data used by the Application is stored locally on your device.
-Limited analytics information may be retained for a reasonable period
-for operational and improvement purposes.
-</p>
+        <section class="policy-section">
+          <h3>8. Third-Party Processing and Tracking</h3>
+          <p>
+            Analytics data is processed through Google Analytics, provided by Google LLC, and is subject to Google's terms of service and privacy policy.
+          </p>
+          <p>
+            LotusBinder does not sell analytics data or use it for advertising-related tracking across other companies' apps or websites, or for advertising personalization.
+          </p>
+          <p>
+            If tracking using an advertising identifier is introduced in the future, this policy will be updated and permission will be requested in accordance with Apple's App Tracking Transparency requirements.
+          </p>
+        </section>
 
-<h2>Children's Privacy</h2>
+        <section class="policy-section">
+          <h3>9. Changes to This Policy</h3>
+          <p>
+            If the purposes of collection, transmitted data, external services used, or settings available to users change, this policy and the explanations shown in the app will be updated to reflect the actual behavior.
+          </p>
+          <p>
+            Material changes will be communicated through an appropriate method, such as an in-app notice.
+          </p>
+        </section>
 
-<p>
-The Application is not directed toward children under the age of 13.
-The Service Provider does not knowingly collect personally identifiable
-information from children under 13 years of age.
-</p>
+        <section class="policy-section">
+          <h3>10. Contact</h3>
+          <p>
+            For questions about this policy or support, please contact
+            <a href="https://x.com/LotusBinder">LotusBinder Support</a>.
+          </p>
+        </section>
+      </section>
+    </main>
 
-<p>
-If you believe that a child has provided personal information through
-the Application, please contact the Service Provider so appropriate
-action can be taken.
-</p>
-
-<h2>Security</h2>
-
-<p>
-The Service Provider takes reasonable measures to protect information
-processed by the Application. While reasonable safeguards are used,
-no method of electronic storage or transmission can be guaranteed to be
-completely secure.
-</p>
-
-<h2>Changes to This Privacy Policy</h2>
-
-<p>
-This Privacy Policy may be updated from time to time.
-Any changes will be reflected on this page.
-</p>
-
-<p>
-This privacy policy is effective as of 2026-05-07.
-</p>
-
-<h2>Your Consent</h2>
-
-<p>
-By using the Application, you consent to the processing of information
-as described in this Privacy Policy.
-</p>
-
-<h2>Contact Us</h2>
-
-<p>
-If you have any questions regarding privacy or this Privacy Policy,
-please contact:
-</p>
-
-<p>
-<a href="https://x.com/LotusBinder" target="_blank" rel="noopener noreferrer">
-https://x.com/LotusBinder
-</a>
-</p>
-
+    <footer>
+      © 2026 LotusBinder
+    </footer>
+  </div>
 </body>
 </html>
