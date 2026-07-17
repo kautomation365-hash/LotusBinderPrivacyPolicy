@@ -274,7 +274,7 @@
         <section class="policy-section">
           <h3>5. 解析情報</h3>
           <p>
-            コレクション機能の利用状況を把握し、登録上限やカード登録導線などの改善を判断するため、Google Analytics for Firebaseを使用します。
+            利用者が利用状況データの共有を有効にした場合に限り、LotusBinderは、コレクション機能の利用状況を把握し、登録上限やカード登録導線などの改善を判断するため、Google Analytics for Firebaseを使用します。
           </p>
           <p>
             アプリが独自に送信するのは、コレクション枚数の範囲、適用中の登録上限、カードの追加方法、追加・上限接近・上限到達・追加拒否の回数です。正確なコレクション枚数は、上限到達時などを除いて範囲に分けて送信します。
@@ -287,7 +287,7 @@
         <section class="policy-section">
           <h3>6. Google Analyticsが自動的に扱う情報</h3>
           <p>
-            Google Analyticsは、アプリインスタンス識別子、アプリの起動やセッションに関する情報、アプリのバージョン、端末・OS・言語、Firebase SDKの動作状況に関する診断情報なども処理します。
+            利用状況データの共有が有効な場合、Google Analyticsは、アプリインスタンス識別子、アプリの起動やセッションに関する情報、アプリのバージョン、端末・OS・言語、Firebase SDKの動作状況に関する診断情報なども処理します。
           </p>
           <p>
             また、通信時のIPアドレスから国や都市などのおおよその地域を推定しますが、Google AnalyticsではIPアドレス自体を記録・保存しないとされています。LotusBinderでは、地域情報を国単位の利用傾向の把握に使用し、対応言語や機能改善の判断に役立てます。住所や現在地の特定を目的に使用しません。
@@ -301,9 +301,9 @@
         </section>
 
         <section class="policy-section">
-          <h3>7. 送信の停止と保存期間</h3>
+          <h3>7. 共有の選択、送信の停止と保存期間</h3>
           <p>
-            利用状況の共有は初期設定で有効です。設定画面からいつでも無効にでき、無効にした後は新しいAnalyticsデータを送信しません。
+            利用状況データは、利用者が初回案内または設定画面で共有を明示的に有効にした場合にのみ送信します。利用者が選択する前、および共有しないことを選択した場合、Analyticsデータは送信しません。共有は設定画面からいつでも有効または無効にできます。無効にした後は新しいAnalyticsデータを送信しません。再び有効にした場合は、その時点以降に発生する新しいAnalyticsデータを送信します。
           </p>
           <p>
             送信済みのイベント単位およびアプリインスタンス単位のデータは、Google Analyticsの保存期間設定とGoogleのポリシーに従って処理されます。集計済みレポートには、同じ保存期間が適用されない場合があります。
@@ -395,7 +395,7 @@
         <section class="policy-section">
           <h3>5. Analytics Information</h3>
           <p>
-            LotusBinder uses Google Analytics for Firebase to understand how collection features are used and to guide improvements to collection capacity, card-addition flows, and related features.
+            If the user enables Usage Data Sharing, LotusBinder uses Google Analytics for Firebase to understand how collection features are used and to guide improvements to collection capacity, card-addition flows, and related features.
           </p>
           <p>
             The app's custom analytics events include only collection-size ranges, the collection limit currently applied, the method used to add a card, and counts of additions, approaching or reaching the limit, and additions blocked by the limit. Except for limit-related states such as reaching the limit, collection sizes are sent as ranges rather than exact counts.
@@ -408,7 +408,7 @@
         <section class="policy-section">
           <h3>6. Information Automatically Processed by Google Analytics</h3>
           <p>
-            Google Analytics also processes an app-instance identifier, information about app launches and sessions, the app version, device, operating system and language information, and diagnostic information about Firebase SDK operation.
+            When Usage Data Sharing is enabled, Google Analytics also processes an app-instance identifier, information about app launches and sessions, the app version, device, operating system and language information, and diagnostic information about Firebase SDK operation.
           </p>
           <p>
             Google Analytics may also estimate a country, city, or other coarse region from the IP address used for communication. Google states that the IP address itself is not logged or stored by Google Analytics. LotusBinder uses regional information only to understand usage trends at the country level and to guide decisions about supported languages and feature improvements. It is not used to determine an address or current location.
@@ -422,9 +422,9 @@
         </section>
 
         <section class="policy-section">
-          <h3>7. Disabling Transmission and Data Retention</h3>
+          <h3>7. Sharing Choices, Disabling Transmission, and Data Retention</h3>
           <p>
-            Usage-data sharing is enabled by default. It can be disabled at any time in the app's settings. After it is disabled, the app does not send new Analytics data.
+            Usage data is sent only after the user explicitly enables sharing in the initial notice or in Settings. No Analytics data is sent before the user makes a choice or if the user chooses not to share. Sharing can be enabled or disabled at any time in Settings. After sharing is disabled, no new Analytics data is sent. If sharing is enabled again, the app sends new Analytics data generated from that point onward.
           </p>
           <p>
             Previously transmitted event-level and app-instance-level data is processed according to the retention settings configured in Google Analytics and Google's applicable policies. The same retention period may not apply to aggregated reports.
